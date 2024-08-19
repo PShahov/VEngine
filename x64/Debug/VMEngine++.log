@@ -1,0 +1,121 @@
+﻿  Chunk.cpp
+  Примечание: включение файла:  C:\Users\PShah\source\repos\VMEngine\VMEngine++\Chunk.h
+  Примечание: включение файла:   C:\Users\PShah\source\repos\VMEngine\VMEngine++\Octree.h
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Octree.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Примечание: включение файла:    C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h
+  Примечание: включение файла:     D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\string
+  Примечание: включение файла:      D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\yvals_core.h
+  Примечание: включение файла:       D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\sal.h
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\concurrencysal.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
+  Примечание: включение файла:       D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xkeycheck.h
+  Примечание: включение файла:      D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring
+  Примечание: включение файла:       D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iosfwd
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\yvals.h
+  Примечание: включение файла:         D:\Windows Kits\10\Include\10.0.22000.0\ucrt\crtdbg.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime_new_debug.h
+  Примечание: включение файла:           D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime_new.h
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\crtdefs.h
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\use_ansi.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cstdio
+  Примечание: включение файла:         D:\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdio.h
+  Примечание: включение файла:           D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_stdio_config.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cstring
+  Примечание: включение файла:         D:\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_memory.h
+  Примечание: включение файла:           D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_memcpy_s.h
+  Примечание: включение файла:            D:\Windows Kits\10\Include\10.0.22000.0\ucrt\errno.h
+  Примечание: включение файла:            D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime_string.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstring.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cwchar
+  Примечание: включение файла:         D:\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wconio.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wdirect.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wio.h
+  Примечание: включение файла:           D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_share.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wprocess.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wtime.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\sys/stat.h
+  Примечание: включение файла:           D:\Windows Kits\10\Include\10.0.22000.0\ucrt\sys/types.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xtr1common
+  Примечание: включение файла:       D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xmemory
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cstdint
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cstdlib
+  Примечание: включение файла:         D:\Windows Kits\10\Include\10.0.22000.0\ucrt\math.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+  Примечание: включение файла:         D:\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_malloc.h
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_search.h
+  Примечание: включение файла:           D:\Windows Kits\10\Include\10.0.22000.0\ucrt\stddef.h
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\limits.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\limits
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cfloat
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\float.h
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\climits
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\isa_availability.h
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\intrin0.h
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\intrin0.inl.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\new
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\exception
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\type_traits
+  Примечание: включение файла:           D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cstddef
+  Примечание: включение файла:          D:\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime_exception.h
+  Примечание: включение файла:           D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\eh.h
+  Примечание: включение файла:            D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_terminate.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xatomic.h
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\__msvc_iter_core.hpp
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\utility
+  Примечание: включение файла:           D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\initializer_list
+  Примечание: включение файла:           D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\concepts
+  Примечание: включение файла:           D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\compare
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\tuple
+  Примечание: включение файла:       D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xpolymorphic_allocator.h
+  Примечание: включение файла:       D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\__msvc_sanitizer_annotate_container.hpp
+  Примечание: включение файла:      D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cctype
+  Примечание: включение файла:       D:\Windows Kits\10\Include\10.0.22000.0\ucrt\ctype.h
+  Примечание: включение файла:     D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\sstream
+  Примечание: включение файла:      D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\istream
+  Примечание: включение файла:       D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream
+  Примечание: включение файла:        D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ios
+  Примечание: включение файла:         D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xlocnum
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cmath
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iterator
+  Примечание: включение файла:          D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\streambuf
+  Примечание: включение файла:           D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xiosbase
+  Примечание: включение файла:            D:\Windows Kits\10\Include\10.0.22000.0\ucrt\share.h
+  Примечание: включение файла:            D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\system_error
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\__msvc_system_error_abi.hpp
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cerrno
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdexcept
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xcall_once.h
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xerrc.h
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\atomic
+  Примечание: включение файла:              D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xatomic_wait.h
+  Примечание: включение файла:              D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xthreads.h
+  Примечание: включение файла:               D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xtimec.h
+  Примечание: включение файла:                D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ctime
+  Примечание: включение файла:                 D:\Windows Kits\10\Include\10.0.22000.0\ucrt\time.h
+  Примечание: включение файла:            D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xlocale
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory
+  Примечание: включение файла:              D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\typeinfo
+  Примечание: включение файла:               D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime_typeinfo.h
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xfacet
+  Примечание: включение файла:             D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xlocinfo
+  Примечание: включение файла:              D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\__msvc_xlocinfo_types.hpp
+  Примечание: включение файла:              D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\clocale
+  Примечание: включение файла:               D:\Windows Kits\10\Include\10.0.22000.0\ucrt\locale.h
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Примечание: включение файла:     C:\Users\PShah\source\repos\VMEngine\VMEngine++\pbl_math.h
+  Примечание: включение файла:     D:\Windows Kits\10\Include\10.0.22000.0\ucrt\math.h
+  Примечание: включение файла:    C:\Users\PShah\source\repos\VMEngine\VMEngine++\VoxelColor.h
+  Примечание: включение файла:    D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\cstdarg
+  Примечание: включение файла:     D:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdarg.h
+  VMEngine++.vcxproj -> C:\Users\PShah\source\repos\VMEngine\x64\Debug\VMEngine++.exe

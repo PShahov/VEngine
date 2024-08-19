@@ -1,0 +1,54 @@
+﻿  AssetsController.cpp
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Mesh.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\VertexBufferObject.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\AssetsController.h(23,2): warning C4091: static : пропускается слева от "AssetsController", когда ни одна переменная не объявлена
+  ChunkController.cpp
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Octree.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Mesh.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\VertexBufferObject.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\AssetsController.h(23,2): warning C4091: static : пропускается слева от "AssetsController", когда ни одна переменная не объявлена
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(32,2): warning C4091: static : пропускается слева от "ChunkController", когда ни одна переменная не объявлена
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.cpp(23,84): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.cpp(23,61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.cpp(23,38): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  GhostCameraController.cpp
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\GhostCameraController.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Input.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Input.h(6,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\lib\opengl32\include\GL\glew.h(85,1): fatal  error C1189: #error:  gl.h included before glew.h
+  Input.cpp
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Input.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Input.h(6,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Shader.cpp
+  TextureBufferObject.cpp
+  VertexBufferObject.cpp
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\VertexBufferObject.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Mesh.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  VMEngine++.cpp
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\VMEngine++.cpp(10,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\VMEngine++.cpp(12,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Input.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Input.h(6,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector3.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Octree.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Mesh.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\VertexBufferObject.h(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\AssetsController.h(23,2): warning C4091: static : пропускается слева от "AssetsController", когда ни одна переменная не объявлена
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\ChunkController.h(32,2): warning C4091: static : пропускается слева от "ChunkController", когда ни одна переменная не объявлена
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\VMEngine++.cpp(20,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\Vector4.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\PShah\source\repos\VMEngine\VMEngine++\GhostCameraController.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Создание кода...

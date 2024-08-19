@@ -1,0 +1,136 @@
+
+Ray2VoxelHit VoxelWithPointInsideBacktracked(vec3 point, vec3 chunkCenter, vec3 ro, vec3 rd){
+
+    vec3 dirfrac = vec3(0);
+    dirfrac.x = 1.0f / rd.x;
+    dirfrac.y = 1.0f / rd.y;
+    dirfrac.z = 1.0f / rd.z;
+    
+    float dist = 0;
+    float distOut = 0;
+
+    int deepest_layer = 10;
+    int nodePointer = 4;
+    vec3 nodeCenter = chunkCenter;
+    
+    vec3 voxPosition[10] = vec3[10](vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0));
+    int selectedVoxInd[10] = int[10](4,0,0,0,0,0,0,0,0,0);
+    Voxel voxel = GetVoxel(4);
+
+    int iterations = 0;
+
+    int _j = 0;
+
+    for(int i = 0; i < deepest_layer && iterations < 512; i++){
+        float sizeMod = pow(2, i);
+        float halfSize = CHUNK_SIZE / sizeMod / 4;
+        // float halfSize = OCTREE_VOXEL_SIZES[i] / 4;
+        iterations++;
+        // nodePointer = selectedVoxInd[i];
+        // if(i < 0) break;
+        // if(IsPointInside(point) == false){
+        //     break;
+        // }
+
+        nodePointer = selectedVoxInd[i];
+
+        int m_layer = abs(int(floor(distance(nodeCenter, ro) / LOD_DISTANCE_PER_LAYER)));
+        m_layer = max(LOD_MIN_LAYER, deepest_layer - m_layer);
+        // m_layer = 20;
+
+        if(floatBitsToInt(TexelFetch1(nodePointer)) == 1 || i == m_layer){
+            voxel = GetVoxel(nodePointer);
+            if(bitInt(floatBitsToInt(TexelFetch1(nodePointer + 1)), OctFillState)){
+                return Ray2VoxelHit(nodeCenter, halfSize * 2, i, nodePointer);
+            }
+            point += rd;
+            i--;
+            continue;
+        }
+        
+        nodePointer += 4;
+
+        for(int j = 0;j < 8;j++){
+            _j = j;
+            vec3 _nCenter = nodeCenter + (OCTREE_DIAGONAL_DIRECTIONS[j] * halfSize);
+            if(IsPointInside(point, _nCenter - vec3(halfSize), _nCenter + vec3(halfSize))){
+                nodeCenter = _nCenter;
+                break;
+            }else{
+                nodePointer += (floatBitsToInt(TexelFetch1(nodePointer))) * 4;
+                selectedVoxInd[i + 1] = nodePointer;
+            }
+        }
+    }
+
+    return Ray2VoxelHit(chunkCenter, 0, -1, 8);
+}
+
+
+VoxelHit renderChunk_2(vec3 ro, vec3 rd, int tbo){
+    int leafsCount = floatBitsToInt(TexelFetch1(0));
+    vec3 chunkCenter = vec3(
+        TexelFetch1(1),
+        TexelFetch1(2),
+        TexelFetch1(3)
+    );
+    chunkCenter += vec3(CHUNK_SIZE * tbo,0,0);
+
+    Voxel voxel = GetVoxel(0);
+
+    float dist = 0;
+    float distOut = 0;
+
+
+    vec3 dirfrac = vec3(0);
+    dirfrac.x = 1.0f / rd.x;
+    dirfrac.y = 1.0f / rd.y;
+    dirfrac.z = 1.0f / rd.z;
+    
+    bool intersect = advancedIntersectAABBdirfrac(ro, rd, chunkCenter - vec3(HALF_CHUNK_SIZE), chunkCenter + vec3(HALF_CHUNK_SIZE), dirfrac, dist, distOut);
+    VoxelHit vh = VoxelHit(vec3(0), vec3(0), vec3(0), MAX_RENDER_DISTANCE, MAX_RENDER_DISTANCE, CHUNK_SIZE, vec4(0), intersect, 0);
+
+
+    if(intersect == false) return vh;
+    
+    vec3 voxPosition[10] = vec3[10](vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0),vec3(0));
+    int selectedVoxInd[10] = int[10](0,0,0,0,0,0,0,0,0,0);
+
+    float halfSize = OCTREE_VOXEL_SIZES[0] / 2.0;
+
+    vec3 pointPos = ro + (rd * (dist + EPSILON));
+
+    voxPosition[0] = chunkCenter;
+    selectedVoxInd[0] = 0;
+
+
+    // for(int v1 = 0;v1 < 8;v1++){
+    //     halfSize = OCTREE_VOXEL_SIZES[1] / 2.0;
+    //     if(bitInt(voxel.data, OctFillState) == false) continue;
+    //     if(IsPointInside(pointPos, chunkCenter - vec3(HALF_CHUNK_SIZE), chunkCenter + vec3(HALF_CHUNK_SIZE)) == false) continue;
+
+    //     for(int v2 = 0;v2 < 8;v2++){
+            
+    //     }
+    // }
+
+    Ray2VoxelHit pointhit = VoxelWithPointInsideBacktracked(pointPos, chunkCenter, ro, rd);
+    if(pointhit.voxelLayer == -1){
+        vh.crossed = false;
+        return vh;
+    }else{
+        voxel = GetVoxelByPointer(pointhit.voxelIndex);
+        advancedIntersectAABBdirfrac(ro , rd, pointhit.voxelCenter - vec3(pointhit.voxelHalfSize), pointhit.voxelCenter + vec3(pointhit.voxelHalfSize), dirfrac, dist, distOut);
+        vec3 rayHitPosition = ro  + (rd * dist);
+        vh.pos = pointhit.voxelCenter;
+        vh.hit = rayHitPosition;
+        vh.dist = dist;
+        vh.distOut = distOut;
+        vh.voxelSize = pointhit.voxelHalfSize * 2;
+        vh.crossed = bitInt(voxel.data, OctFillState);
+        vh.color = voxel.color;
+        vh.state = voxel.data;
+        vh.normal = BoxNormal(normalize(vh.hit - vh.pos));
+        return vh;
+    }
+}
