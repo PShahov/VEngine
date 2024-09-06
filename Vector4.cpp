@@ -38,12 +38,12 @@ Vector4::Vector4(const Vector4& v)
 
 Vector4 Vector4::operator+(Vector4 b)
 {
-	Vector4* res = new Vector4(this->x, this->y, this->z, this->w);
-	res->x += b.x;
-	res->y += b.y;
-	res->z += b.z;
-	res->w += b.w;
-	return *res;
+	Vector4 res =  Vector4(this->x, this->y, this->z, this->w);
+	res.x += b.x;
+	res.y += b.y;
+	res.z += b.z;
+	res.w += b.w;
+	return res;
 }
 
 Vector4 Vector4::operator-(Vector4 b)

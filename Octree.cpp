@@ -182,7 +182,8 @@ void Octree::AverageColor() {
 	int r = 0, g = 0, b = 0, a = 0;
 
 	for (int i = 0; i < 8; i++) {
-		if (Leafs[i]->GetState(VoxelStateIndex::FillState)) {
+		if (Leafs[i]->IsLeaf() == false) Leafs[i]->AverageColor();
+		if (Leafs[i]->GetState(VoxelStateIndex::FillState) && (int(Leafs[i]->Color.Color[3])) > 0) {
 			filledLeafs++;
 			r += Leafs[i]->Color.Color[0];
 			g += Leafs[i]->Color.Color[1];
@@ -193,17 +194,22 @@ void Octree::AverageColor() {
 
 	if (filledLeafs >= 4) {
 		r = std::min(255, r / filledLeafs);
-		g = std::min(255, r / filledLeafs);
-		b = std::min(255, r / filledLeafs);
-		a = std::min(255, r / filledLeafs);
+		g = std::min(255, g / filledLeafs);
+		b = std::min(255, b / filledLeafs);
+		a = std::min(255, a / filledLeafs);
 
 		Color = VoxelColor(r, g, b, a);
+	}
+	else {
+		Color = VoxelColor(255, 0, 0, 0);
 	}
 }
 void Octree::AverageFillState() {
 	if (IsLeaf()) return;
 	int filledLeafs = 0;
 	for (int i = 0; i < 8; i++) {
+		if (Leafs[i]->IsLeaf() == false)
+			Leafs[i]->AverageFillState();
 		if (Leafs[i]->GetState(VoxelStateIndex::FillState))
 			filledLeafs++;
 	}

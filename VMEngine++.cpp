@@ -103,6 +103,8 @@ int main()
     }
     std::cerr << "Status: Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
 
+    Time::Load();
+
     AssetsController::Load();
     AssetsController::Meshes["plane"] = AssetsController::CreatePlane();
 
@@ -190,6 +192,8 @@ int main()
             glUniformMatrix4fv(AssetsController::Shaders["raymarch"]->GetParam("projection"), 2, GL_FALSE, &Camera::MainCamera->Projection.Row0.x);
             glUniform2f(AssetsController::Shaders["raymarch"]->GetParam("u_resolution"), Camera::MainCamera->Width, Camera::MainCamera->Height);
         }
+
+        glUniform1f(AssetsController::Shaders["raymarch"]->GetParam("u_time"), Time::Alive());
         /* Render here */
         //glClearColor(1, 0, 0, 1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -212,6 +216,8 @@ int main()
 
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
             ImGui::Text("Chunk mem: %s", Debug::SizeSuffix(ChunkController::Chunks[0]->DataLength * sizeof(float)).c_str());
+            ImGui::Text("alive: %f", Time::Alive());
+            ImGui::Text("delta time: %f", Time::DeltaTime());
 
 
             if (ImGui::CollapsingHeader("Render")) {
@@ -236,7 +242,7 @@ int main()
                     ImGui::Selectable(AssetsController::ImportModels[i].c_str());
                     if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(0))
                     {
-                        Octree* oct = ChunkController::Chunks[0]->ChunkOctree;
+                        Octree* oct = nullptr;
                         oct = AssetsController::LoadQB("models\\" + AssetsController::ImportModels[i]);
                         delete ChunkController::Chunks[0]->ChunkOctree;
                         ChunkController::Chunks[0]->ChunkOctree = oct;
@@ -276,6 +282,22 @@ int main()
         if (Input::IsKeyPressed(GLFW_KEY_F4)) {
             std::cout << Time::DeltaTime() << "\n";
         }
+        //if (Input::IsKeyPressed(GLFW_KEY_R)) {
+        //    Octree* oct = ChunkController::Chunks[0]->ChunkOctree;
+
+        //    //oct->DivideRecour();
+
+        //    for (int i = 0; i < 300000; i++) {
+        //        oct->DivideNode();
+        //        oct->RemoveLeafs();
+        //    }
+
+        //    //ChunkController::Chunks[0]->flag_dataUpdateNeeded = true;
+        //}
+        //if (Input::IsKeyPressed(GLFW_KEY_T)) {
+        //    std::cout << "deleted: " << ChunkController::Chunks[0]->ChunkOctree->OptimizeToBottom() << "\n";
+        //    ChunkController::Chunks[0]->flag_dataUpdateNeeded = true;
+        //}
         glfwSwapInterval(RenderConfig.swapInterval ? 1 : 0);
         Input::key_tick();
     }

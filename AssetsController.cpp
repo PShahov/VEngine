@@ -183,6 +183,7 @@ Octree* AssetsController::LoadQB(std::string path) {
 			}
 		}
 	}
+	std::cout << rOct->GetOctreeSize() << "\n";
 	rOct->OptimizeToBottom();
 	std::cout << rOct->GetOctreeSize() << "\n";
 	std::cout << Time::Now() - _loadTime << "\n";

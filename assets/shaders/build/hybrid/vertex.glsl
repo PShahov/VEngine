@@ -960,22 +960,48 @@ void main()
     // return;
 
     vec4 color = vec4(0);
-    if(NoiseRender == 1){
-        if(rand((uv - mod(uv, 0.001)) * u_time * 1) > 0.5){
-        // if(rand(uv * u_time) > NoiseRenderThreshold){
+    switch(NoiseRender){
+        case 0:{
             switch(u_AA_type){
                 case 0: color = render(uv); break;
                 case 1: color = renderAAx2(); break;
                 case 2: color = renderAAx3(); break;
                 case 3: color = renderAAx4(); break;
             }
+            break;
         }
-    }else{
-        switch(u_AA_type){
-            case 0: color = render(uv); break;
-            case 1: color = renderAAx2(); break;
-            case 2: color = renderAAx3(); break;
-            case 3: color = renderAAx4(); break;
+        case 1:{
+            if(rand((uv - mod(uv, 0.1)) * u_time * 1) > 0.5){
+            // if(rand((uv - mod(uv, 0.001) * u_time * 1)) > 0.5){
+            // if(rand(uv * u_time) > NoiseRenderThreshold){
+                switch(u_AA_type){
+                    case 0: color = render(uv); break;
+                    case 1: color = renderAAx2(); break;
+                    case 2: color = renderAAx3(); break;
+                    case 3: color = renderAAx4(); break;
+                }
+            }
+            break;
+        }
+        case 2:{
+            if(int(u_time) % 2 == 0){
+                if(uv.x > 0)
+                    switch(u_AA_type){
+                        case 0: color = render(uv); break;
+                        case 1: color = renderAAx2(); break;
+                        case 2: color = renderAAx3(); break;
+                        case 3: color = renderAAx4(); break;
+                    }
+            }else{
+                if(uv.x < 0)
+                    switch(u_AA_type){
+                        case 0: color = render(uv); break;
+                        case 1: color = renderAAx2(); break;
+                        case 2: color = renderAAx3(); break;
+                        case 3: color = renderAAx4(); break;
+                    }
+            }
+            break;
         }
     }
     

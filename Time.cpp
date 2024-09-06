@@ -20,13 +20,20 @@ float Time::Alive()
 void Time::Tick()
 {
 	tpns tp = clock::now();
-	_alive =(double)tp.time_since_epoch().count() / 1000 / 1000 / 1000;
-	_deltaTime = _alive - _prime;
-	_prime = _alive;
+	double _p = (double)tp.time_since_epoch().count() / 1000 / 1000 / 1000;
+	_deltaTime = _p - _prime;
+	_prime = _p;
+	_alive =  _alive + _deltaTime;
 }
 
 float Time::Now()
 {
 	tpns tp = clock::now();
 	return (float)tp.time_since_epoch().count() / 1000 / 1000 / 1000;
+}
+
+void Time::Load()
+{
+	tpns tp = clock::now();
+	_prime = (double)tp.time_since_epoch().count() / 1000 / 1000 / 1000;
 }

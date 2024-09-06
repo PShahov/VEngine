@@ -34,83 +34,83 @@ Vector3::Vector3(const Vector3& v)
 
 Vector3 Vector3::operator+(Vector3 b)
 {
-	Vector3* res = new Vector3(this->x,this->y,this->z);
-	res->x += b.x;
-	res->y += b.y;
-	res->z += b.z;
-	return *res;
+	Vector3 res = Vector3(this->x,this->y,this->z);
+	res.x += b.x;
+	res.y += b.y;
+	res.z += b.z;
+	return res;
 }
 
 Vector3 Vector3::operator-(Vector3 b)
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x -= b.x;
-	res->y -= b.y;
-	res->z -= b.z;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x -= b.x;
+	res.y -= b.y;
+	res.z -= b.z;
+	return res;
 }
 
 Vector3 Vector3::operator*(Vector3 b)
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x *= b.x;
-	res->y *= b.y;
-	res->z *= b.z;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x *= b.x;
+	res.y *= b.y;
+	res.z *= b.z;
+	return res;
 }
 
 Vector3 Vector3::operator/(Vector3 b)
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x /= b.x;
-	res->y /= b.y;
-	res->z /= b.z;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x /= b.x;
+	res.y /= b.y;
+	res.z /= b.z;
+	return res;
 }
 
 Vector3 Vector3::operator-()
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x *= -1;
-	res->y *= -1;
-	res->z *= -1;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x *= -1;
+	res.y *= -1;
+	res.z *= -1;
+	return res;
 }
 
 Vector3 Vector3::operator-(float d)
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x -= d;
-	res->y -= d;
-	res->z -= d;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x -= d;
+	res.y -= d;
+	res.z -= d;
+	return res;
 }
 
 Vector3 Vector3::operator+(float d)
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x += d;
-	res->y += d;
-	res->z += d;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x += d;
+	res.y += d;
+	res.z += d;
+	return res;
 }
 
 Vector3 Vector3::operator*(float d)
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x *= d;
-	res->y *= d;
-	res->z *= d;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x *= d;
+	res.y *= d;
+	res.z *= d;
+	return res;
 }
 
 Vector3 Vector3::operator/(float d)
 {
-	Vector3* res = new Vector3(this->x, this->y, this->z);
-	res->x /= d;
-	res->y /= d;
-	res->z /= d;
-	return *res;
+	Vector3 res = Vector3(this->x, this->y, this->z);
+	res.x /= d;
+	res.y /= d;
+	res.z /= d;
+	return res;
 }
 
 Vector3 Vector3::operator=(Vector3 b)

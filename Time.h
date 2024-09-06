@@ -16,6 +16,8 @@ public:
 
 	static float Now();
 
+	static void Load();
+
 private:
 	static double _deltaTime;
 	static double _alive;

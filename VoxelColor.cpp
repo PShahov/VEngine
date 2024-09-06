@@ -26,6 +26,10 @@ VoxelColor::VoxelColor(float value)
 	Color[0] = ((hex >> 0) & 0xff);
 }
 
+VoxelColor::~VoxelColor()
+{
+}
+
 void VoxelColor::Set(unsigned char r, unsigned char g, unsigned char b, unsigned char a)
 {
 	Color[0] = r;

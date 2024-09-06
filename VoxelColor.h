@@ -8,6 +8,8 @@ public:
 	VoxelColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a = 255);
 	VoxelColor(unsigned int hex = 0xff0000ff);
 	VoxelColor(float value);
+	
+	~VoxelColor();
 
 	void Set(unsigned char r, unsigned char g, unsigned char b, unsigned char a = 255);
 
